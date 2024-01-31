@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sumanthcs7/namaste-react#readme",
   "devDependencies": {
+    "browserslist": "last 5 version",
     "parcel": "^2.11.0",
     "process": "^0.11.10"
   },
