@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
 import { IMG_URL } from "../utils/constants";
 
 const ResComponent = (props) => {
     const { resData } = props;
-    const { cloudinaryImageId, name, cuisines, avgRating, sla } = resData.info;
+    const { cloudinaryImageId, id, name, cuisines, avgRating, sla, } = resData.info;
     return (
-      <div className="res-card">
+      <Link to={"/restaurants/"+id}>
+       <div className="res-card">
         <img
           className="res-logo"
           alt="res-logo"
@@ -18,6 +20,8 @@ const ResComponent = (props) => {
         <h4>{avgRating} Stars</h4>
         <h4>{sla.slaString}</h4>
       </div>
+      </Link>
+     
     );
   };
 
